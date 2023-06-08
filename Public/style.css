@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica&family=Itim&display=swap');
+
+/* font-family: 'Geologica', sans-serif;
+font-family: 'Itim', cursive; */
+
+:root {
+    --background: white;
+    --brand: #b500a0;
+    --text : black;
+}
+body {
+    margin: 0px;
+    background-color: var(--background);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5vw 3.5vw 0vw 3.5vw;
+    font-size: 40px;
+    color: var(--brand);
+    font-family: 'Itim', cursive;
+    margin: 0px;
+}
+
+#theme-selector{
+    border-radius: 20px;
+    padding: 0px 1.5vw;
+    font-size: 17px;
+    background: transparent;
+    outline: 0;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px var(--brand);
+    color: var(--brand);
+    font-family: 'Geologica', sans-serif;
+    cursor: pointer;
+}
+
+#theme-selector:hover, #theme-selector:focus{
+    box-shadow: 0px 0px 5px var(--brand);
+    background-color: var(--brand);
+    color: var(--background);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 5vw;
+    font-family: 'Geologica', sans-serif;
+}
+
+.hero-text{
+    color: var(--text);
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+}
+.hero-text > span {
+    color: var(--brand);
+}
+
+#long-link, #key-word{
+    outline: 0;
+    border: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px var(--text);
+    background-color: var(--background);
+    color: var(--text);
+    padding: 12px 20px;
+    margin: 30px 10px 10px 5px;
+    font-size: 20px;
+    width: 70vw;
+    font-family: 'Geologica', sans-serif;
+}
+
+
+#long-link:hover, #long-link:focus, #key-word:hover, #key-word:focus {
+    box-shadow: 0px 0px 5px var(--brand);
+}
+
+#key-word {
+    border-radius: 20px 0px 0px 20px;
+    margin: 5px 0px 5px 10px;
+    font-size: 20px;
+    width: 400px;
+}
+#start{
+    outline: 0;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    margin: 5px 10px 5px 0px;
+    font-size: 20px;
+    padding: 12px 20px;
+    cursor: pointer;
+    background-color: var(--brand);
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px var(--brand);
+    font-family: 'Geologica', sans-serif;
+}
+
+#start:hover {
+    opacity: 0.8;
+    box-shadow: 0px 0px 5px var(--brand);
+}
+
+#start:active{
+    opacity: 0.5;
+}
+
+.short-box {
+    margin: 30px;
+	padding: 10px;
+	background-color: var(--background);
+    border: none;
+	border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px var(--text);
+	display: flex;
+    color: var(--text);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    width: 80%;
+}
+
+.short-box:hover {
+    box-shadow: 0px 0px 5px var(--brand);
+}
+
+.short-box input {
+	padding: 20px;
+	font-size: 28px;
+	color: var(--text);
+    font-weight: 700;
+	border: none;
+	outline: none;
+    width: 50vw;
+    background-color: var(--background);
+    font-family: 'Itim', cursive;
+}
+.short-box button {
+	padding: 20px;
+    width: 120px;
+    background-color: var(--brand);
+	color: white;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	cursor: pointer;
+    box-sizing: border-box;
+    font-family: 'Geologica', sans-serif;
+}
+
+.short-box button:hover {
+    opacity: 0.8;
+    box-shadow: 0px 0px 5px var(--brand);
+}
+
+.short-box button:active {
+    opacity: 0.5;
+}
+
+.illustrate {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -1;
+}
+
+.illustrate svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 166px;
+    transform: rotateY(180deg);
+}
+
+.illustrate .shape-fill {
+    fill: var(--brand);
+}
+
+
+@media screen and (max-width: 570px) {
+    #long-link {
+        width: 90vw;
+    }
+    #key-word{
+        width: 180px;
+    }
+    .hero-text{
+        padding: 40px;
+        font-size: 35px;
+    }
+    .illustrate svg{
+        width: 200%;
+    }
+    .short-box {
+        margin: 30px 5px;
+        width: auto;
+        height: auto;
+    }
+    .short-box input {
+        width: 100px;
+    }
+    
+}
