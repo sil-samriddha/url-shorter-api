@@ -48,9 +48,10 @@ The API has four main endpoints:
 ```bash
 GET http://127.0.0.1:${process.env.port}/
 ```
+![sample](https://github.com/sil-samriddha/url-shorter-api/assets/95685662/0c0156f5-7ed1-436c-960d-1c51695e0c7d)
 
 
-### CREATE NEW SHORTURL 
+### Create new short URL
 
 ```bash
 POST http://127.0.0.1:${process.env.port}/
@@ -103,7 +104,7 @@ For every different type of errors different error responses will be returned.
 ### Redirect to the original URL
 
 ```bash
-GET http://127.0.0.1:${process.env.port}/:shorturl
+GET http://127.0.0.1:${process.env.port}/:shortUrl
 ```
 
 This endpoint expects a path parameter with the short URL.
@@ -128,7 +129,7 @@ If the short URL does not exist, an error response will be returned.
 
 ### Get the statistics
 ```bash
-GET http://127.0.0.1:${process.env.port}/:shorturl/stats
+GET http://127.0.0.1:${process.env.port}/:shortUrl/stats
 ```
 
 This endpoint expects a path parameter with the short URL.
@@ -153,7 +154,11 @@ Example response:
 
 If the short URL does not exist, an error response will be returned.
 
-### DELETE /api/:shortUrl
+### Delete the short URL
+
+```bash
+DELETE http://127.0.0.1:${process.env.port}/:shortUrl
+```
 
 This endpoint expects a path parameter with the short URL.
 
